@@ -12,11 +12,11 @@ async def on_ready():
 @bot.event  
 async def on_member_join(member):     #成員加入
     channel=bot.get_channel(939909732922175579)       #get_channel("頻道id")=>取得頻道
-    await channel.send(f"{member} 跳進來了")
+    await channel.send(f"{member} 跳進來了")      #發送訊息
     
 async def on_member_remove(member):     #成員離開
     channel=bot.get_channel(939910394682691625)       #get_channel("頻道id")=>取得頻道
     await channel.send(f"{member} 離開了")
 
 
-bot.run("OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.cwGG_NfkIqEzAGcHNNWhl4rORRE")  #執行機器人
+bot.run("OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.2jvMpN1ogUa8alZ53H5leSPxAT8")  #執行機器人
