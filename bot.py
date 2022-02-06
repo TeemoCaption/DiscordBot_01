@@ -10,4 +10,4 @@ async def on_ready():     #功能
     print("Bot is online")
 
 
-bot.run("OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.GMU0Ues5-K8v_9JUmYHHRQAXIPM")  #執行機器人
+bot.run("OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.noKSn13eIDibjLHqi79dNHnXR-A")  #執行機器人
