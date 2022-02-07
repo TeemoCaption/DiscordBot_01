@@ -4,12 +4,12 @@ from discord.ext import commands
 intents=discord.Intents.all()
 intents.members=True
 
-bot=commands.Bot(command_prefix="!",intents=intents)   #建置Discord機器人
+bot=commands.Bot(command_prefix="! ",intents=intents)   #建置Discord機器人
 #command_prefix=>打指令前的命令字首
 
 @bot.command()
 async def ping(ctx):     #打指令    ctx全名叫context
-    await ctx.send(bot.latency)
+    await ctx.send(f'{round(bot.latency*1000)}(ms)')
 
 @bot.event     #機器人事件
 #async def=>協程函式
@@ -27,4 +27,4 @@ async def on_member_remove(member):     #成員離開
     await channel.send(f"{member} 離開了")
 
 
-bot.run("OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.vIFfMf-7PcNxT4MQscBdH_2AakE")  #執行機器人
+bot.run("OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.d5kKAWnGBTUpzUaiTM-joHnJk7g")  #執行機器人
