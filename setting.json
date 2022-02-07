@@ -1,6 +1,39 @@
 {
-    "TOKEN": "OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.70u1hU6bbBLfSyoAaKspI5Hjr6o",
+    "TOKEN": "OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.TNNDiu8LjgOPgVSqDqRllExoybs",
     "welcome_channel": "939909732922175579",
     "leave_channel": "940086823122792488",
-    "photo": ["D:\\個人\\學習\\Github Project\\DiscordBot_01\\img\\2Take1.jpg", "D:\\個人\\學習\\Github Project\\DiscordBot_01\\img\\午夜.jpg"]
+    "photo": {
+        "2T": "img\\2Take1.jpg",
+        "21lua": "img\\21lua.jpg",
+        "午夜": "img\\午夜.jpg",
+        "FK": "img\\FK.jfif",
+        "幻影": "img\\幻影.jpg",
+        "表演者": "img\\表演者.jpg",
+        "威脅": "img\\威脅.jpg",
+        "毒液": "img\\毒液.jpg",
+        "軌道": "img\\軌道.jpg",
+        "氩氣": "img\\氩氣.jpg",
+        "氪金": "img\\氪金.png",
+        "殘月": "img\\殘月moon.png",
+        "菲拉01": "img\\菲拉.jfif",
+        "菲拉02": "img\\菲拉02.jpg",
+        "開拓者": "img\\開拓者.jfif",
+        "黃昏": "img\\黃昏.jpg",
+        "新星": "img\\新星.jfif",
+        "暗星": "img\\暗星.jpg",
+        "碎片": "img\\碎片.jpg",
+        "電路": "img\\電路.jpg",
+        "搗亂": "img\\擾亂.jpg",
+        "騎士": "img\\騎士.jpg",
+        "櫻桃": "img\\櫻桃.jfif",
+        "JF": "img\\JF.jpg",
+        "OX": "img\\OX.jfif",
+        "Stand": "img\\Stand.jpg",
+        "VVS": "img\\VVS.jpg",
+        "XF": "img\\XF.jpg",
+        "Zero菜單": "img\\Zero菜單.jpg",
+        "zero lua": "img\\zerolua.png",
+        "SFlua": "img\\SF lua.jpg"
+    }
+
 }

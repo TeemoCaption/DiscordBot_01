@@ -1,43 +1,47 @@
 from quopri import encodestring
+from unicodedata import name
 import discord
 from discord.ext import commands
 import json
-import random
+import os
 
 
 with open('setting.json','r',encoding='utf8') as jfile:
     jdata=json.load(jfile)
-
+    
 intents=discord.Intents.all()
 intents.members=True
 
 bot=commands.Bot(command_prefix="! ",intents=intents)   #建置Discord機器人
 #command_prefix=>打指令前的命令字首
 
-@bot.command()
-async def ping(ctx):     #打指令    ctx全名叫context
-    await ctx.send(f'{round(bot.latency*1000)}(ms)')
-    
-@bot.command()
-async def photo(ctx):
-    random_pic=random.choice(jdata["photo"])
-    pic=discord.File(random_pic)
-    await ctx.send(file=pic)
 
 @bot.event     #機器人事件
 #async def=>協程函式
 async def on_ready():   
     print("Bot is online")
     
-@bot.event  
-async def on_member_join(member):     #成員加入
-    channel=bot.get_channel(int(jdata['welcome_channel']))       #get_channel("頻道id")=>取得頻道
-    await channel.send(f"{member} 跳進來了")      #發送訊息
 
-@bot.event  
-async def on_member_remove(member):     #成員離開
-    channel=bot.get_channel(int(jdata['leave_channel']))       #get_channel("頻道id")=>取得頻道
-    await channel.send(f"{member} 離開了")
+@bot.command()
+async def load(ctx,extension):    #cog---load載入類別
+    bot.load_extension(f'cmds.{extension}')   #載入外部檔
+    await ctx.send(f"loaded {extension} 成功！")
+    
+@bot.command()
+async def unload(ctx,extension):     #cog---unload刪除類別
+    bot.unload_extension(f'cmds.{extension}')   #載入外部檔
+    await ctx.send(f"Un-loaded {extension} 成功！")
+    
+@bot.command()
+async def reload(ctx,extension):     #動態修改指令後載入至類別
+    bot.reload_extension(f'cmds.{extension}')   #載入外部檔
+    await ctx.send(f"Re-loaded {extension} 成功！")
 
 
-bot.run(jdata['TOKEN'])  #執行機器人
+for Filename in os.listdir('./cmds'):      #遍歷cmds資料夾
+    if(Filename.endswith('.py')):     #如果檔名為.py
+        bot.load_extension(f'cmds.{Filename[:-3]}')    #從檔名開頭取到倒數第三個字
+
+if __name__=="__main__":
+    bot.run(jdata['TOKEN'])  #執行機器人
+
