@@ -1,11 +1,13 @@
 import discord
 from discord.ext import commands
 
+intents=discord.Intents.default()
+intents.members=True
+
 bot=commands.Bot(command_prefix="!",intents=intents)   #建置Discord機器人
 #command_prefix=>打指令前的命令字首
 
-intents=discord.Intents.default()
-intents.members=True
+
 
 @bot.event     #機器人事件
 #async def=>協程函式
@@ -23,4 +25,4 @@ async def on_member_remove(member):     #成員離開
     await channel.send(f"{member} 離開了")
 
 
-bot.run("OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.ktyI61SCJVAnl3bCiHicjyH37BE")  #執行機器人
+bot.run("OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.m4w7i2oMMhgt4qTCxwhQBoc2WTQ")  #執行機器人
