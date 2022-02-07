@@ -16,17 +16,17 @@ class Event(Cog_Extension):
     @commands.Cog.listener()   #監聽觸發性事件  
     async def on_member_join(self,member):     #成員加入
         channel=self.bot.get_channel(int(jdata['welcome_channel']))       #get_channel("頻道id")=>取得頻道
-        await channel.send(f"{member} 跳進來了")      #發送訊息
+        await channel.send(f"{member} \n跳進來了")      #發送訊息
 
     @commands.Cog.listener()     
     async def on_member_remove(self,member):     #成員離開
         channel=self.bot.get_channel(int(jdata['leave_channel']))       #get_channel("頻道id")=>取得頻道
-        await channel.send(f"{member} 離開了")
+        await channel.send(f"{member} \n離開了")
     
     @commands.Cog.listener()     
     async def on_message(self,msg):   
         if msg.content=="嗨" and msg.author != self.bot.user:
-            await msg.channel.send("哈囉! "+msg.author)
+            await msg.channel.send("哈囉!")
             
         if msg.content=="2T" or msg.content=="2t":
             pic=discord.File(jdata['photo']['2T'])
@@ -99,7 +99,7 @@ class Event(Cog_Extension):
         elif msg.content=="JF":
             pic=discord.File(jdata['photo']['JF'])
             await msg.channel.send(file=pic)
-        elif msg.content=="OX":
+        elif msg.content=="OX" or msg.content=="ox":
             pic=discord.File(jdata['photo']['OX'])
             await msg.channel.send(file=pic)
         elif msg.content=="Stand" or msg.content=="stand":
