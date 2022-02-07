@@ -1,13 +1,15 @@
 import discord
 from discord.ext import commands
 
-intents=discord.Intents.default()
+intents=discord.Intents.all()
 intents.members=True
 
 bot=commands.Bot(command_prefix="!",intents=intents)   #建置Discord機器人
 #command_prefix=>打指令前的命令字首
 
-
+@bot.command()
+async def ping(ctx):     #打指令    ctx全名叫context
+    await ctx.send(bot.latency)
 
 @bot.event     #機器人事件
 #async def=>協程函式
@@ -21,8 +23,8 @@ async def on_member_join(member):     #成員加入
 
 @bot.event  
 async def on_member_remove(member):     #成員離開
-    channel=bot.get_channel(939910394682691625)       #get_channel("頻道id")=>取得頻道
+    channel=bot.get_channel(940086823122792488)       #get_channel("頻道id")=>取得頻道
     await channel.send(f"{member} 離開了")
 
 
-bot.run("OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.m4w7i2oMMhgt4qTCxwhQBoc2WTQ")  #執行機器人
+bot.run("OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.vIFfMf-7PcNxT4MQscBdH_2AakE")  #執行機器人
