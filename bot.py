@@ -23,4 +23,4 @@ async def on_member_remove(member):     #成員離開
     await channel.send(f"{member} 離開了")
 
 
-bot.run("OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.LmKTzwBmJd-6iHY8MghnSbYfqI4")  #執行機器人
+bot.run("OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.ktyI61SCJVAnl3bCiHicjyH37BE")  #執行機器人
