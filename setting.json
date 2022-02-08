@@ -1,5 +1,5 @@
 {
-    "TOKEN": "OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.H3u1Ug2kHcW5dYxlyZoF-qm0c9U",
+    "TOKEN": "OTM5ODI0NzQ4NzY0OTg3Mzk1.Yf-eAQ.eKlwLuNxlMv75iI7_l72oSxID98",
     "welcome_channel": "939909732922175579",
     "leave_channel": "940086823122792488",
     "random_img": ["img\\2Take1.jpg", "img\\Zero菜單.jpg", "img\\Stand.jpg"],
@@ -37,12 +37,13 @@
         "SFlua": "img\\SF lua.jpg"
     },
     "command": {
-        "com1": "2TAKE1  櫻桃  stand有毒版  午夜  zero菜單  JF  vvs",
-        "con2": "2TAKE1  櫻桃  stand有毒版  午夜  zero菜單  JF  vvs  黃昏  XF",
-        "con3": "幻影  XF  OX  暗星  新星  黃昏  X計劃  擾亂  菲拉  回弹  威脅  軌道  開拓者  毒液  KM 英雄會 騎士 氩气 ",
-        "con4": "幻影  XF  2TAKE1  開拓者  毒液  暗星  英雄會  利落",
-        "con5": "2TAKE1  暗星  stand  表演者  毒液  zero菜單 利落",
-        "con6": "ox  碎片  毒液  表演者  利落  vn【vn最新推出的】",
-        "con7": "zerolua  21lua  鬼崩lua  SF lua"
+        "con": "2TAKE1",
+        "con2": "2TAKE1  櫻桃  stand有毒版  午夜  zero菜單  JF  vvs",
+        "con3": "2TAKE1  櫻桃  stand有毒版  午夜  zero菜單  JF  vvs  黃昏  XF",
+        "con4": "幻影  XF  OX  暗星  新星  黃昏  X計劃  擾亂  菲拉  回弹  威脅  軌道  開拓者  毒液  KM 英雄會 騎士 氩气 ",
+        "con5": "幻影  XF  2TAKE1  開拓者  毒液  暗星  英雄會  利落",
+        "con6": "2TAKE1  暗星  stand  表演者  毒液  zero菜單 利落",
+        "con7": "ox  碎片  毒液  表演者  利落  vn【vn最新推出的】",
+        "con8": "zerolua  21lua  鬼崩lua  SF lua"
     }
 }
