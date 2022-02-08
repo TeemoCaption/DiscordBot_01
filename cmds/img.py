@@ -12,7 +12,7 @@ with open('setting.json','r',encoding='utf8') as jfile:
 class Img(Cog_Extension):
     @commands.command()
     async def photo(self,ctx):
-        random_pic=random.choice(jdata["photo"])
+        random_pic=random.choice(jdata["random_img"])
         pic=discord.File(random_pic)
         await ctx.send(file=pic)
         

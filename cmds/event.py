@@ -1,5 +1,6 @@
 from msilib.schema import Class
 from quopri import encodestring
+from xml.sax.handler import feature_external_ges
 import discord
 from discord.ext import commands
 import json
@@ -25,8 +26,37 @@ class Event(Cog_Extension):
     
     @commands.Cog.listener()     
     async def on_message(self,msg):   
-        if msg.content=="嗨" and msg.author != self.bot.user:
-            await msg.channel.send("哈囉!")
+        keyword=["嗨","哈囉","你好","有人嗎?","@貓咪的鏟屎官(群主)","推薦"]
+        if  msg.content.endswith in keyword and msg.author != self.bot.user:
+            await msg.channel.send("哈囉!需要什麼幫助?常見提問有:\n輔助推薦\n營業時間\n\n")
+            if msg.content=="輔助推薦": 
+                await msg.channel.send("目前可分為幾種輔助：\n全能型\n最強科技\n崩潰防護型\n中等型\n模組型\n任務型\n刷錢型\n2TAKE腳本\n\n")
+                if msg.content=="全能型":
+                    await msg.channel.send(jdata["command"]["con1"])
+                elif msg.content=="最強科技":
+                    await msg.channel.send(jdata["command"]["con2"])
+                elif msg.content=="崩潰防護型":
+                    await msg.channel.send(jdata["command"]["con3"])
+                elif msg.content=="中等型":
+                    await msg.channel.send(jdata["command"]["con4"])
+                elif msg.content=="模組型":
+                    await msg.channel.send(jdata["command"]["con5"])
+                elif msg.content=="任務型":
+                    await msg.channel.send(jdata["command"]["con6"])
+                elif msg.content=="刷錢型":
+                    await msg.channel.send(jdata["command"]["con7"])
+                elif msg.content=="2TAKE腳本":
+                    await msg.channel.send(jdata["command"]["con8"])
+            elif  msg.content=="營業時間":
+                await msg.channel.send("由於開學關係(本人大學生)，回覆時間通常在下午5、6點那邊(禮拜三例外)有需要什麼請私訊群主或打在交流區那邊，有時候在忙可能會慢回請見諒")
+            else: 
+                await msg.channel.send("抱歉，我不知道你說什麼")
+        else:
+            await msg.channel.send("抱歉，我不知道你說什麼")
+            
+                
+            
+        
             
         if msg.content=="2T" or msg.content=="2t":
             pic=discord.File(jdata['photo']['2T'])
@@ -121,6 +151,7 @@ class Event(Cog_Extension):
             pic=discord.File(jdata['photo']['SFlua'])
             await msg.channel.send(file=pic)
         
+    
         
 def setup(bot):
     bot.add_cog(Event(bot))    #Main類別裡面
