@@ -12,7 +12,7 @@ with open('setting.json','r',encoding='utf8') as jfile:
 intents=discord.Intents.all()
 intents.members=True
 
-bot=commands.Bot(command_prefix="! ",intents=intents)   #建置Discord機器人
+bot=commands.Bot(command_prefix="!",intents=intents)   #建置Discord機器人
 #command_prefix=>打指令前的命令字首
 
 
